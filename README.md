@@ -34,13 +34,14 @@ crawler-maps-scraping/
 ├── requirements.txt        # Bibliotecas Python necessárias para execução
 ├── config.py               # Leitura e gerenciamento de configurações do sistema
 ├── main.py                 # Arquivo centralizador que executa o fluxo completo
+├── test_db.py              # Script utilitário para teste isolado de conexão e persistência
 └── pipeline/
     ├── __init__.py
     ├── generator.py        # Algoritmo de roteamento determinístico das buscas
     ├── scraper_client.py   # Gerenciamento de requisições e pooling com a API de scraping
     ├── enricher.py         # Tratamento de dados, expressões regulares e consultas a APIs de CNPJ
     ├── scoring.py          # Lógica do cálculo de ICP e definição de status
-    └── database.py         # Formatação de dados para o banco e instrução SQL de inserção
+    └── database.py         # Formação de dados para o banco e instrução SQL de inserção
 ```
 
 ## Pré-requisitos
@@ -71,3 +72,11 @@ Instale as dependências listadas no projeto usando o gerenciador de pacotes do 
 
 Para iniciar a execução diária do pipeline, execute o arquivo principal:
   python main.py
+
+## Testes de Integração e Persistência
+
+Para validar se as credenciais do seu banco de dados e as validações de tipos do PostgreSQL (incluindo as constraints e tipos ENUM personalizados) estão configuradas corretamente de forma isolada do scraper de mapas, você pode executar o script utilitário de teste:
+
+```bash
+py test_db.py
+
