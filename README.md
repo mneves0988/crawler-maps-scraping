@@ -27,6 +27,7 @@ O pipeline foi projetado para rodar de forma agendada ou sob demanda, executando
 
 O código foi dividido de forma modular seguindo o princípio de responsabilidade única:
 
+```
 crawler-maps-scraping/
 ├── .env.example            # Exemplo de credenciais e variáveis de ambiente
 ├── .gitignore              # Lista de caminhos ignorados pelo controle de versão
@@ -40,6 +41,7 @@ crawler-maps-scraping/
     ├── enricher.py         # Tratamento de dados, expressões regulares e consultas a APIs de CNPJ
     ├── scoring.py          # Lógica do cálculo de ICP e definição de status
     └── database.py         # Formatação de dados para o banco e instrução SQL de inserção
+```
 
 ## Pré-requisitos
 
