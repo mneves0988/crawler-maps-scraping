@@ -23,7 +23,7 @@ class ICPScorer:
             try:
                 # Converte string formatada em float caso necessário
                 if isinstance(capital_social, str):
-                    capital_social = float(capital_social.replace('[^\d,]', '').replace(',', '.'))
+                    capital_social = float(capital_social.replace(r'[^\d,]', '').replace(',', '.'))
                 if 50000 < capital_social < 5000000:
                     score += 10
             except Exception:

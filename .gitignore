@@ -1,0 +1,20 @@
+# Credenciais e variaveis de ambiente (Contem dados sensiveis)
+.env
+
+# Ambiente virtual do Python (Nao deve ser enviado pois e recriado localmente)
+venv/
+env/
+
+# Arquivos de cache e compilacao do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Configuracoes locais de editores de codigo (opcional)
+.vscode/
+.idea/
+
+# Arquivos temporarios do sistema operacional
+Thumbs.db
+.DS_Store
